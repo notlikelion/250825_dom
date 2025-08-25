@@ -156,6 +156,10 @@
         // 2. 만약 첫 번째 자식 요소가 존재한다면, 그 요소를 제거(remove)하세요.
         if (firstItem) {
           // list.removeChild(firstItem);
+          const voice = new SpeechSynthesisUtterance(
+            "저장한대매!!! 저장한대매!!? 난 너를 믿었는데!!!"
+          );
+          window.speechSynthesis.speak(voice);
           firstItem.remove(); // 해당 요소를 자기 자신이 remove().
         } else {
           // 3. 존재하지 않는다면, '삭제할 아이템이 없습니다.' 경고창을 띄우세요.
