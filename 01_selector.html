@@ -9,17 +9,13 @@
         font-family: sans-serif;
         line-height: 1.6;
         padding: 20px;
+        /* 마진 의미 없음 */
       }
       h1,
       p {
         border: 1px solid #eee;
         padding: 10px;
         border-radius: 5px;
-      }
-      code {
-        background-color: #f4f4f4;
-        padding: 2px 5px;
-        border-radius: 3px;
       }
     </style>
   </head>
@@ -51,7 +47,15 @@
       // --- 1. getElementById: ID로 요소 선택하기 ---
       // 문서에서 'title'이라는 고유한 ID를 가진 요소를 찾습니다.
       // 가장 빠르고 명확한 단일 요소 선택 방법입니다.
-      // 🧑‍💻 여기에 코드를 작성하세요.
+      //   document.write("안녕!"); // 등장하는 지점에서 추가적인 html 등의 내용을 작성
+      // window -> document -> ...
+      // window 전역객체에서 모든 것을 끌어다 쓴다
+      // document 화면 제어.
+      console.log(document.getElementById("main-container"));
+      const titleElement = document.getElementById("title");
+      console.log(titleElement);
+      console.log(titleElement.textContent);
+      // console -> 개발자 도구
 
       // --- 2. querySelector: CSS 선택자로 첫 번째 요소 선택하기 ---
       // '.content'라는 클래스를 가진 요소 중 '첫 번째' 요소를 찾습니다.
